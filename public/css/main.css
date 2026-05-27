@@ -160,14 +160,31 @@ button {
 }
 
 .brand-mark {
+  position: relative;
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   color: var(--paper);
   background: var(--night);
-  font-family: "Space Grotesk", Arial, sans-serif;
+  border: 1px solid rgba(196, 154, 69, 0.45);
+  font-family: "Cinzel Decorative", "Space Grotesk", Arial, sans-serif;
+  font-size: 1.38rem;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+  isolation: isolate;
+}
+
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  z-index: -1;
+  border: 1px solid rgba(255, 247, 234, 0.18);
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 .main-nav {
@@ -3662,6 +3679,21 @@ button,
 .page-hero.compact .btn.ghost {
   background: rgba(255, 255, 255, 0.09);
   border-color: rgba(242, 200, 121, 0.56);
+}
+
+.brand .brand-mark {
+  color: #fff7ea;
+  background:
+    radial-gradient(circle at 36% 24%, rgba(255, 247, 234, 0.22), transparent 28%),
+    linear-gradient(145deg, #8f3dbc, #32114a 54%, #09050d);
+  border-color: rgba(242, 200, 121, 0.72);
+  box-shadow:
+    0 0 0 1px rgba(255, 247, 234, 0.08) inset,
+    0 10px 28px rgba(143, 61, 188, 0.34),
+    0 0 28px rgba(242, 200, 121, 0.16);
+  font-family: "Cinzel Decorative", "Space Grotesk", Arial, sans-serif;
+  font-size: 1.45rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.78), 0 0 14px rgba(242, 200, 121, 0.34);
 }
 
 @media (max-width: 1080px) {
