@@ -1179,6 +1179,15 @@ button {
   font-size: 1.08rem;
 }
 
+.about-banner {
+  background:
+    linear-gradient(115deg, rgba(10, 9, 14, 0.9), rgba(69, 31, 76, 0.68) 45%, rgba(196, 154, 69, 0.25)),
+    linear-gradient(180deg, rgba(10, 9, 14, 0.1), rgba(10, 9, 14, 0.82)),
+    url("/images/iv (8).jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
 .about-story-copy {
   display: grid;
   gap: 18px;
@@ -1458,7 +1467,7 @@ button {
   color: var(--paper);
   background:
     linear-gradient(145deg, rgba(24, 32, 31, 0.94), rgba(24, 32, 31, 0.78)),
-    url("/images/p (4).jpg");
+    url("/images/iv (4).jpeg");
   background-size: cover;
   background-position: center;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1469,13 +1478,13 @@ button {
 .format-card:nth-child(2) {
   background-image:
     linear-gradient(145deg, rgba(24, 32, 31, 0.94), rgba(116, 53, 69, 0.72)),
-    url("/images/voy (2).png");
+    url("/images/iv (7).jpeg");
 }
 
 .format-card:nth-child(3) {
   background-image:
     linear-gradient(145deg, rgba(24, 32, 31, 0.94), rgba(15, 118, 110, 0.58)),
-    url("/images/o (3).png");
+    url("/images/iv (9).jpeg");
 }
 
 .format-card > i {
@@ -1780,6 +1789,55 @@ button {
   color: #f5ead7;
 }
 
+.services-banner {
+  background-image:
+    linear-gradient(115deg, rgba(10, 9, 14, 0.88), rgba(69, 31, 76, 0.62) 48%, rgba(15, 118, 110, 0.28)),
+    linear-gradient(180deg, rgba(10, 9, 14, 0.08), rgba(10, 9, 14, 0.72)),
+    url("/images/iv (1).jpeg");
+}
+
+.consultations-banner {
+  background-image:
+    linear-gradient(115deg, rgba(10, 9, 14, 0.9), rgba(15, 118, 110, 0.45) 48%, rgba(196, 154, 69, 0.2)),
+    linear-gradient(180deg, rgba(10, 9, 14, 0.08), rgba(10, 9, 14, 0.72)),
+    url("/images/iv (3).jpeg");
+}
+
+.booking-banner {
+  background-image:
+    linear-gradient(115deg, rgba(10, 9, 14, 0.78), rgba(116, 53, 69, 0.42) 48%, rgba(196, 154, 69, 0.16)),
+    linear-gradient(180deg, rgba(10, 9, 14, 0.08), rgba(10, 9, 14, 0.72)),
+    url("/images/iv (6).jpeg");
+}
+
+.contact-banner {
+  background-image:
+    linear-gradient(115deg, rgba(10, 9, 14, 0.82), rgba(69, 31, 76, 0.5) 48%, rgba(15, 118, 110, 0.22)),
+    linear-gradient(180deg, rgba(10, 9, 14, 0.08), rgba(10, 9, 14, 0.72)),
+    url("/images/iv (2).jpeg");
+}
+
+.blog-banner {
+  background-image:
+    linear-gradient(115deg, rgba(10, 9, 14, 0.82), rgba(29, 48, 86, 0.48) 48%, rgba(196, 154, 69, 0.16)),
+    linear-gradient(180deg, rgba(10, 9, 14, 0.08), rgba(10, 9, 14, 0.72)),
+    url("/images/iv (5).jpeg");
+}
+
+.privacy-banner {
+  background-image:
+    linear-gradient(115deg, rgba(10, 9, 14, 0.76), rgba(15, 118, 110, 0.34) 48%, rgba(69, 31, 76, 0.14)),
+    linear-gradient(180deg, rgba(10, 9, 14, 0.08), rgba(10, 9, 14, 0.72)),
+    url("/images/iv (11).jpeg");
+}
+
+.not-found-banner {
+  background-image:
+    linear-gradient(115deg, rgba(10, 9, 14, 0.82), rgba(29, 48, 86, 0.54) 48%, rgba(69, 31, 76, 0.2)),
+    linear-gradient(180deg, rgba(10, 9, 14, 0.08), rgba(10, 9, 14, 0.72)),
+    url("/images/iv (10).jpeg");
+}
+
 .page-hero.compact .btn.ghost {
   color: var(--paper);
   background: rgba(255, 255, 255, 0.08);
@@ -1959,6 +2017,12 @@ button {
   .about-guidance-band,
   .about-reviews {
     grid-template-columns: 1fr;
+  }
+
+  .about-guidance-band {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero {
