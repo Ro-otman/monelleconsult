@@ -1,0 +1,18 @@
+<section class="page-hero section compact">
+  <p class="eyebrow">Tarifs</p>
+  <h1>Choisissez la formule pour consulter Monelle.</h1>
+  <p>Sélectionnez la durée selon la profondeur de votre question et le temps d'échange souhaité avec Monelle.</p>
+</section>
+
+<section class="section pricing-grid">
+  <% plans.forEach((plan, index) => { %>
+    <article class="pricing-card <%= index === 1 ? 'featured' : '' %>">
+      <% if (index === 1) { %><span class="badge">Le plus choisi</span><% } %>
+      <h2><%= plan.name %></h2>
+      <p><%= plan.duration %></p>
+      <strong><%= plan.price %></strong>
+      <span><%= plan.details %></span>
+      <a class="btn <%= index === 1 ? 'primary' : 'ghost' %>" href="/reservation">Choisir</a>
+    </article>
+  <% }) %>
+</section>

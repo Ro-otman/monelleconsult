@@ -1,0 +1,25 @@
+{
+  "name": "monelle",
+  "version": "1.0.0",
+  "description": "Site vitrine de voyance Monelle avec Node.js, Express et EJS.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "voyance",
+    "express",
+    "ejs",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

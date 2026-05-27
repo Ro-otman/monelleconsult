@@ -1,0 +1,34 @@
+<section class="page-hero section compact">
+  <p class="eyebrow">Rendez-vous avec Monelle</p>
+  <h1>Préparez votre consultation privée avec Monelle.</h1>
+  <p>Choisissez une formule, indiquez votre disponibilité et partagez la question que vous souhaitez lui confier.</p>
+</section>
+
+<section class="section contact-layout">
+  <form class="contact-form" action="/contact" method="post">
+    <label>Formule
+      <select name="plan" required>
+        <% plans.forEach((plan) => { %>
+          <option value="<%= plan.name %>"><%= plan.name %> - <%= plan.duration %></option>
+        <% }) %>
+      </select>
+    </label>
+    <label>Nom complet
+      <input type="text" name="name" placeholder="Votre nom" required>
+    </label>
+    <label>Email
+      <input type="email" name="email" placeholder="vous@email.com" required>
+    </label>
+    <label>Disponibilité souhaitée
+      <input type="text" name="availability" placeholder="Ex: mardi après-midi">
+    </label>
+    <label>Question principale
+      <textarea name="message" rows="5" placeholder="Quelques lignes suffisent" required></textarea>
+    </label>
+    <button class="btn primary" type="submit">Demander un rendez-vous</button>
+  </form>
+  <aside class="contact-card calm">
+    <h2>Avant d'échanger avec Monelle</h2>
+    <p>Préparez une question principale et gardez de quoi noter les points importants. L'échange avec Monelle reste privé et confidentiel.</p>
+  </aside>
+</section>

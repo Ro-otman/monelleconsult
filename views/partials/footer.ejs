@@ -1,0 +1,28 @@
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <a class="brand footer-brand" href="/">
+        <span class="brand-mark">M</span>
+        <span><%= brand %></span>
+      </a>
+      <p>L'univers de Monelle, voyante intuitive, pour recevoir une guidance privée, confidentielle et personnalisée.</p>
+    </div>
+    <div>
+      <h2>Navigation</h2>
+      <% navItems.slice(0, 5).forEach((item) => { %>
+        <a href="<%= item.href %>"><%= item.label %></a>
+      <% }) %>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <a href="tel:<%= phone.replaceAll(' ', '') %>"><%= phone %></a>
+      <a href="mailto:<%= email %>"><%= email %></a>
+      <a href="/reservation">Prendre rendez-vous</a>
+      <a href="/politique-de-confidentialite">Politique de confidentialité</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <%= new Date().getFullYear() %> Monelle. Tous droits réservés.</span>
+    <span>Les guidances de Monelle restent confidentielles et ne remplacent pas un avis médical, juridique ou financier.</span>
+  </div>
+</footer>

@@ -1,0 +1,38 @@
+<section class="page-hero section compact">
+  <p class="eyebrow">Conseils de Monelle</p>
+  <h1>Les sujets que Monelle aborde dans ses guidances.</h1>
+  <p>Explorez les thèmes qui reviennent souvent dans ses consultations: amour, blocages, protection spirituelle, évolution personnelle et relations familiales.</p>
+</section>
+
+<section class="section blog-category-list">
+  <% blogCategories.forEach((category) => { %>
+    <article class="blog-category-card">
+      <header>
+        <span class="card-icon"><i class="bx <%= category.icon %>" aria-hidden="true"></i></span>
+        <div>
+          <p class="eyebrow">Catégorie</p>
+          <h2><%= category.title %></h2>
+        </div>
+      </header>
+      <ul class="article-title-list">
+        <% category.articles.forEach((article, articleIndex) => { %>
+          <li class="article-preview">
+            <h3><a href="/blog"><%= article %></a></h3>
+            <div class="article-consultation-cta">
+              <strong>Guidance privée avec Monelle</strong>
+              <p>Obtenez des réponses claires sur votre situation grâce à une consultation confidentielle et approfondie avec Monelle.</p>
+              <a class="btn primary" href="/reservation"><i class="bx bx-right-arrow-alt" aria-hidden="true"></i> Commencer la consultation</a>
+            </div>
+            <% if (articleIndex === 0 || articleIndex === 3) { %>
+              <div class="article-extra-links" aria-label="Contenus complémentaires">
+                <a href="/blog">Articles similaires</a>
+                <a href="/#avis-clients">Avis clients</a>
+                <a href="/#questions-frequentes">Questions fréquentes</a>
+              </div>
+            <% } %>
+          </li>
+        <% }) %>
+      </ul>
+    </article>
+  <% }) %>
+</section>

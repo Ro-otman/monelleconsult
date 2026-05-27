@@ -1,0 +1,112 @@
+<section class="page-hero section compact">
+  <p class="eyebrow">Consultations</p>
+  <h1>Choisissez la manière d'échanger avec Monelle.</h1>
+  <p>Téléphone, visio ou message préparé: chaque format vous permet de recevoir sa guidance avec discrétion, écoute et sérieux.</p>
+  <div class="hero-actions">
+    <a class="btn primary" href="/reservation"><i class="bx bx-calendar-star" aria-hidden="true"></i> Réserver maintenant</a>
+    <a class="btn ghost" href="#choisir-format"><i class="bx bx-compass" aria-hidden="true"></i> Trouver le bon format</a>
+  </div>
+</section>
+
+<section class="section consultation-list">
+  <% consultationFormats.forEach((format) => { %>
+    <article class="consultation-format-card">
+      <span class="card-icon"><i class="bx <%= format.icon %>" aria-hidden="true"></i></span>
+      <h2><%= format.title %></h2>
+      <p><%= format.text %></p>
+      <a href="/reservation">Choisir ce format</a>
+    </article>
+  <% }) %>
+</section>
+
+<section class="section consultation-helper" id="choisir-format">
+  <div class="section-heading narrow">
+    <p class="eyebrow"><i class="bx bx-slider-alt" aria-hidden="true"></i> Choisir simplement</p>
+    <h2>Le bon format selon votre besoin du moment.</h2>
+  </div>
+  <div class="consultation-choice-grid">
+    <article>
+      <strong>Besoin d'une réponse rapide</strong>
+      <p>Choisissez le téléphone pour parler directement, clarifier une question et recevoir une lecture immédiate.</p>
+    </article>
+    <article>
+      <strong>Sujet sensible ou profond</strong>
+      <p>Préférez la visio pour un échange plus posé, avec davantage de nuances et de temps pour expliquer votre situation.</p>
+    </article>
+    <article>
+      <strong>Envie de relire la guidance</strong>
+      <p>Optez pour le message détaillé si vous voulez une synthèse écrite, facile à conserver et à relire ensuite.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split-section consultation-process">
+  <div>
+    <p class="eyebrow"><i class="bx bx-list-check" aria-hidden="true"></i> Déroulement</p>
+    <h2>Un parcours simple pour éviter toute hésitation.</h2>
+    <p>Vous choisissez votre formule, vous indiquez le format souhaité et vous partagez votre question principale. Monelle vous répond ensuite dans un cadre confidentiel, avec une guidance adaptée à votre situation.</p>
+  </div>
+  <div class="steps">
+    <div><span>01</span><i class="bx bx-time-five" aria-hidden="true"></i><p>Choisissez la durée qui correspond à la profondeur de votre question.</p></div>
+    <div><span>02</span><i class="bx bx-message-square-detail" aria-hidden="true"></i><p>Expliquez votre situation en quelques lignes, avec les informations importantes.</p></div>
+    <div><span>03</span><i class="bx bx-lock-alt" aria-hidden="true"></i><p>Recevez votre guidance dans un échange privé, clair et respectueux.</p></div>
+  </div>
+</section>
+
+<section class="section consultation-plans">
+  <div class="section-heading narrow">
+    <p class="eyebrow"><i class="bx bx-wallet" aria-hidden="true"></i> Formules</p>
+    <h2>Sélectionnez le temps d'échange adapté à votre question.</h2>
+  </div>
+  <div class="pricing-grid">
+    <% plans.forEach((plan, index) => { %>
+      <article class="pricing-card <%= index === 1 ? 'featured' : '' %>">
+        <% if (index === 1) { %><span class="badge">Le plus choisi</span><% } %>
+        <h2><%= plan.name %></h2>
+        <p><%= plan.duration %></p>
+        <strong><%= plan.price %></strong>
+        <span><%= plan.details %></span>
+        <a class="btn <%= index === 1 ? 'primary' : 'ghost' %>" href="/reservation">Réserver</a>
+      </article>
+    <% }) %>
+  </div>
+</section>
+
+<section class="section consultation-prepare">
+  <div class="section-heading narrow">
+    <p class="eyebrow"><i class="bx bx-edit-alt" aria-hidden="true"></i> Avant la consultation</p>
+    <h2>Préparez seulement l'essentiel.</h2>
+  </div>
+  <div class="consultation-checklist">
+    <span><i class="bx bx-check" aria-hidden="true"></i> Votre prénom ou pseudonyme</span>
+    <span><i class="bx bx-check" aria-hidden="true"></i> Votre question principale</span>
+    <span><i class="bx bx-check" aria-hidden="true"></i> Le contexte utile, sans tout raconter</span>
+    <span><i class="bx bx-check" aria-hidden="true"></i> Le format souhaité: téléphone, visio ou message</span>
+  </div>
+</section>
+
+<section class="section faq-section">
+  <div class="section-heading narrow">
+    <p class="eyebrow"><i class="bx bx-help-circle" aria-hidden="true"></i> Questions utiles</p>
+    <h2>Ce qu'il faut savoir avant de réserver.</h2>
+  </div>
+  <div class="faq-list">
+    <% faqs.forEach((faq, index) => { %>
+      <article class="faq-item <%= index === 0 ? 'open' : '' %>">
+        <button type="button" class="faq-question">
+          <span><%= faq.question %></span>
+          <i class="bx bx-chevron-down" aria-hidden="true"></i>
+        </button>
+        <p><%= faq.answer %></p>
+      </article>
+    <% }) %>
+  </div>
+</section>
+
+<section class="section final-cta">
+  <div>
+    <p class="eyebrow">Commencer simplement</p>
+    <h2>Réservez votre consultation et laissez Monelle vous guider dans un cadre confidentiel.</h2>
+  </div>
+  <a class="btn primary" href="/reservation"><i class="bx bx-right-arrow-alt" aria-hidden="true"></i> Demander un rendez-vous</a>
+</section>
