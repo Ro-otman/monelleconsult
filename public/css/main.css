@@ -3335,6 +3335,28 @@ li,
   box-shadow: 0 0 0 7px rgba(242, 200, 121, 0.12), 0 12px 28px rgba(0, 0, 0, 0.26);
 }
 
+.nav-toggle {
+  background: rgba(20, 10, 34, 0.96);
+  border-color: rgba(242, 200, 121, 0.58);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+}
+
+.nav-toggle span {
+  background: #f2c879;
+}
+
+.nav-toggle:hover,
+.nav-toggle.open {
+  background: linear-gradient(135deg, #8f3dbc, #5a247b);
+  border-color: #f2c879;
+  box-shadow: 0 14px 34px rgba(143, 61, 188, 0.38);
+}
+
+.nav-toggle:hover span,
+.nav-toggle.open span {
+  background: #fff7ea;
+}
+
 .hero-panel strong {
   color: #fff7ea;
   text-shadow: 0 3px 18px rgba(0, 0, 0, 0.9);
@@ -3381,5 +3403,137 @@ li,
   .main-nav.open .mobile-nav-cta i {
     color: #09050d;
     background: #f0c46d;
+  }
+}
+
+/* No black text pass */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+label,
+small,
+strong,
+span,
+a,
+button,
+.faq-question,
+.article-preview h3 a,
+.pricing-card strong,
+.service-card h2,
+.service-card h3,
+.contact-card h2,
+.consultation-list h2 {
+  color: #fff7ea;
+}
+
+.hero-text,
+.page-hero p,
+.split-section p,
+.quote-band p,
+.service-card p,
+.pricing-card span,
+.post-card p,
+.consultation-list p,
+.contact-card p,
+.mood-copy p,
+.presentation-copy p,
+.faq-item p,
+.site-footer p,
+.footer-bottom,
+.testimonial-card span,
+.format-card p,
+.trust-strip span,
+.hero-note span,
+.hero-micro-grid span,
+.legal-page p,
+.legal-page ul {
+  color: #e4d6ec;
+}
+
+.eyebrow,
+.service-card a,
+.post-card a,
+.contact-card a,
+.consultation-format-card a,
+.article-extra-links a,
+.hero-micro-grid strong,
+.trust-strip strong,
+.stats-row strong,
+.steps span {
+  color: #f2c879;
+}
+
+.btn.primary,
+.monelle-consult-link,
+.badge {
+  color: #fff7ea;
+  background: linear-gradient(135deg, #8f3dbc, #5a247b);
+  border-color: rgba(242, 200, 121, 0.46);
+}
+
+.btn.primary i,
+.monelle-consult-link i {
+  color: #fff7ea;
+}
+
+.btn.ghost,
+.btn.ghost.light,
+.read-more-toggle,
+.contact-card .contact-social-links a,
+.article-extra-links a {
+  color: #fff7ea;
+}
+
+.loader-orb span {
+  color: #fff7ea;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.status-dot,
+.format-card > i,
+.floating-assistance-icon,
+.feature-grid .feature-icon {
+  color: #fff7ea;
+  background: linear-gradient(135deg, #8f3dbc, #5a247b);
+}
+
+.page-hero.compact h1,
+.services-banner h1,
+.consultations-banner h1 {
+  color: #fff7ea;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.9);
+}
+
+.page-hero.compact p:not(.eyebrow) {
+  color: #efe1f7;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.72);
+}
+
+.page-hero.compact .btn.ghost,
+.page-hero.compact .btn.ghost i {
+  color: #fff7ea;
+}
+
+.page-hero.compact .btn.ghost {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(242, 200, 121, 0.56);
+}
+
+@media (max-width: 1080px) {
+  .main-nav.open a,
+  .main-nav.open a span,
+  .main-nav.open .mobile-nav-cta,
+  .main-nav.open .mobile-nav-cta span {
+    color: #fff7ea;
+  }
+
+  .main-nav.open a.active i,
+  .main-nav.open .mobile-nav-cta i {
+    color: #fff7ea;
+    background: linear-gradient(135deg, #8f3dbc, #5a247b);
   }
 }
