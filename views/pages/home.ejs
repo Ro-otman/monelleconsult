@@ -18,20 +18,22 @@
   <div class="hero-content">
     <p class="eyebrow"><i class="bx bx-moon" aria-hidden="true"></i> Monelle, voyante intuitive</p>
     <h1 class="hero-title">
-      <span>Entrez dans l'univers</span>
-      <span>de Monelle pour</span>
-      <span>recevoir une guidance</span>
-      <span>claire.</span>
+      <span>Obtenez des réponses</span>
+      <span>claires sur votre</span>
+      <span>situation sentimentale,</span>
+      <span>vos blocages et les</span>
+      <span>énergies qui influencent</span>
+      <span>actuellement votre avenir.</span>
     </h1>
     <p class="hero-text hero-mobile-hidden">Monelle vous accompagne avec écoute, intuition et discrétion pour comprendre vos blocages, vos relations et les énergies qui influencent votre avenir.</p>
     <div class="hero-note">
-      <span><i class="bx bx-lock-alt" aria-hidden="true"></i> Privée</span>
+      <span><i class="bx bx-lock-alt" aria-hidden="true"></i>Consultation privée</span>
       <span><i class="bx bx-shield-quarter" aria-hidden="true"></i> Confidentielle</span>
-      <span><i class="bx bx-user-voice" aria-hidden="true"></i> Personnalisée</span>
+      <span><i class="bx bx-user-voice" aria-hidden="true"></i> Analyse personnalisée</span>
     </div>
     <div class="hero-actions">
       <a class="btn primary" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> Contacter Monelle</a>
-      <a class="btn ghost light" href="/apropos"><i class="bx bx-compass" aria-hidden="true"></i> Découvrir son approche</a>
+      <a class="btn ghost light" href="/blog"><i class="bx bx-compass" aria-hidden="true"></i> Découvrir son approche</a>
     </div>
     <aside class="hero-panel premium-card hero-video-panel hero-mobile-video-panel" aria-label="Résumé Monelle en vidéo">
       <video class="hero-panel-video" autoplay loop playsinline controls poster="/images/p (5).jpg" data-mobile-sound-video>
@@ -94,6 +96,11 @@
     <p class="eyebrow"><i class="bx bx-diamond" aria-hidden="true"></i> Expérience Monelle</p>
     <h2>Un espace pensé autour de Monelle et de sa guidance.</h2>
     <p>Chaque page vous rapproche de son approche: une présence calme, des informations utiles, une réservation simple et une ambiance qui met en confiance dès les premières secondes.</p>
+    <div class="mood-points" aria-label="Repères de consultation">
+      <span><i class="bx bx-check" aria-hidden="true"></i> Écoute attentive</span>
+      <span><i class="bx bx-check" aria-hidden="true"></i> Réponse claire</span>
+      <span><i class="bx bx-check" aria-hidden="true"></i> Cadre discret</span>
+    </div>
   </div>
   <div class="mood-gallery" aria-label="Ambiance Monelle">
     <img src="/images/iv (1).jpeg" alt="Tirage de cartes dans une ambiance chaleureuse">
@@ -121,6 +128,10 @@
       <p>Grâce à une approche intuitive et une écoute attentive, elle aide chaque personne à mieux comprendre les énergies entourant sa situation afin d'obtenir des réponses claires, un éclairage sincère et une vision plus apaisée de son avenir.</p>
       <p>Au fil des années, plus de 5 000 consultations ont été réalisées avec discrétion et sérieux auprès de personnes recherchant des réponses concernant leur vie amoureuse, leurs relations, leurs blocages ou leur évolution personnelle.</p>
       <p>Chaque situation étant unique, les consultations sont réalisées de manière personnalisée afin d'apporter une analyse approfondie adaptée aux énergies et aux difficultés propres à chacun.</p>
+      <div class="consultation-note">
+        <i class="bx bx-sparkles" aria-hidden="true"></i>
+        <span>Une guidance pensée pour vous aider à poser les bonnes questions et avancer avec plus de recul.</span>
+      </div>
     </div>
   </div>
 
@@ -160,12 +171,6 @@
         <h3><%= service.title %></h3>
         <p><%= service.text %></p>
         <% if (service.details) { %>
-          <button class="read-more-toggle" type="button" data-read-more aria-expanded="false" aria-controls="service-details-<%= index %>">
-            Lire plus
-          </button>
-          <video class="service-inline-video" controls playsinline preload="metadata">
-            <source src="/images/vid.mp4" type="video/mp4">
-          </video>
           <div class="service-details" id="service-details-<%= index %>" hidden>
             <% service.details.forEach((detail) => { %>
               <p><%= detail %></p>
@@ -176,8 +181,11 @@
                 <li><%= item %></li>
               <% }) %>
             </ul>
-            <a class="btn primary service-cta" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> Contacter Monelle</a>
           </div>
+          <button class="read-more-toggle" type="button" data-read-more aria-expanded="false" aria-controls="service-details-<%= index %>">
+            Lire plus
+          </button>
+          <a class="btn primary service-cta" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> Commencer la consultation</a>
         <% } %>
       </article>
     <% }) %>
@@ -195,6 +203,7 @@
         <i class="bx <%= format.icon %>" aria-hidden="true"></i>
         <h3><%= format.label %></h3>
         <p><%= format.text %></p>
+        <a class="format-link" href="<%= format.href %>" target="_blank" rel="noopener noreferrer">Échanger sur <%= format.label %></a>
       </article>
     <% }) %>
   </div>
@@ -260,6 +269,10 @@
   <div>
     <p class="eyebrow">Prêt à commencer</p>
     <h2>Votre situation mérite le regard attentif et confidentiel de Monelle.</h2>
+    <div class="final-cta-meta">
+      <span><i class="bx bx-lock-alt" aria-hidden="true"></i> Conversation privée</span>
+      <span><i class="bx bx-time-five" aria-hidden="true"></i> Réponse personnalisée</span>
+    </div>
   </div>
   <a class="btn primary" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> Contacter Monelle</a>
 </section>

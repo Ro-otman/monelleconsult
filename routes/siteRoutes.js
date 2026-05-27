@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/', siteController.home);
 router.get('/services', siteController.services);
 router.get('/consultations', siteController.consultations);
-router.get('/tarifs', (req, res) => res.redirect(301, '/consultations'));
+router.get('/tarifs', (req, res) => res.redirect(301, '/contact'));
 router.get('/apropos', siteController.about);
 router.get('/blog', siteController.blog);
 router.get('/politique-de-confidentialite', siteController.privacy);

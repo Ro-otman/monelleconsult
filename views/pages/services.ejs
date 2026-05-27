@@ -11,12 +11,6 @@
       <h2><%= service.title %></h2>
       <p><%= service.text %></p>
       <% if (service.details) { %>
-        <button class="read-more-toggle" type="button" data-read-more aria-expanded="false" aria-controls="service-page-details-<%= index %>">
-          Lire plus
-        </button>
-        <video class="service-inline-video" controls playsinline preload="metadata">
-          <source src="/images/vid.mp4" type="video/mp4">
-        </video>
         <div class="service-details" id="service-page-details-<%= index %>" hidden>
           <% service.details.forEach((detail) => { %>
             <p><%= detail %></p>
@@ -28,8 +22,11 @@
             <% }) %>
           </ul>
         </div>
+        <button class="read-more-toggle" type="button" data-read-more aria-expanded="false" aria-controls="service-page-details-<%= index %>">
+          Lire plus
+        </button>
       <% } %>
-      <a class="service-link" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer">Contacter Monelle</a>
+      <a class="btn primary service-link service-cta" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> Commencer la consultation</a>
     </article>
   <% }) %>
 </section>

@@ -9,6 +9,12 @@ const siteData = {
   },
   socialLinks: [
     {
+      label: 'WhatsApp',
+      href: 'https://wa.me/33644675670',
+      icon: 'bxl-whatsapp',
+      text: 'Le canal le plus direct pour envoyer votre question à Monelle.'
+    },
+    {
       label: 'Facebook',
       href: 'https://www.facebook.com/share/1Csn9cgXJS/',
       icon: 'bxl-facebook',
@@ -31,37 +37,94 @@ const siteData = {
       href: 'https://www.snapchat.com/add/mo.voyance?share_id=xM9MtsRR7T8&locale=fr-FR',
       icon: 'bxl-snapchat',
       text: 'Ajoutez Monelle pour un contact simple et direct.'
-    },
-    {
-      label: 'WhatsApp',
-      href: 'https://wa.me/33644675670',
-      icon: 'bxl-whatsapp',
-      text: 'Le canal le plus direct pour envoyer votre question à Monelle.'
     }
   ],
   navItems: [
     { label: 'Accueil', href: '/' },
     { label: 'Accompagnements', href: '/services' },
-    { label: 'Réseaux', href: '/consultations' },
-    { label: 'Monelle', href: '/apropos' },
     { label: 'Conseils de Monelle', href: '/blog' },
     { label: 'Contact', href: '/contact' }
   ],
   services: [
     {
-      title: 'Guidance sentimentale',
+      title: 'Amour & Retour Affectif',
       icon: 'bx-heart',
-      text: 'Clarifiez une relation, une rencontre ou une décision de cœur avec une lecture douce et directe.'
+      text: 'Vous traversez une rupture, un silence radio ou une situation sentimentale qui vous fait souffrir émotionnellement ? Vous ressentez un éloignement, des doutes, une incompréhension ou la peur de perdre une personne importante à vos yeux ?',
+      details: [
+        'Cette consultation sentimentale vous permet d’obtenir une analyse sérieuse et approfondie de votre situation amoureuse afin de mieux comprendre les énergies qui entourent votre relation actuelle.',
+        'Qu’il s’agisse d’un retour affectif, d’un éloignement soudain, d’une relation instable, d’une infidélité, d’une troisième personne ou d’un blocage amoureux, cette consultation vous aide à obtenir des réponses claires sur l’évolution possible de votre relation et les obstacles pouvant empêcher votre stabilité sentimentale.',
+        'Chaque situation est étudiée avec discrétion, sérieux et précision afin de vous apporter un éclairage sincère sur votre avenir amoureux.'
+      ],
+      suitedFor: [
+        'Retour affectif',
+        'Rupture amoureuse',
+        'Silence radio',
+        'Relation compliquée',
+        'Infidélité',
+        'Troisième personne',
+        'Blocage sentimental',
+        'Avenir amoureux'
+      ]
     },
     {
-      title: 'Éclairage professionnel',
+      title: 'Déblocage & Ouverture des Chemins',
+      icon: 'bx-lock-alt',
+      text: 'Avez-vous l’impression que votre vie est bloquée malgré tous vos efforts ? Que certaines situations négatives se répètent continuellement sans raison apparente ?',
+      details: [
+        'Lorsque les échecs, les retards, les difficultés ou la stagnation deviennent fréquents dans plusieurs domaines de votre vie, il peut être important de comprendre l’origine profonde de ces blocages afin de retrouver une évolution plus positive.',
+        'Cette consultation permet d’analyser les énergies entourant votre situation afin d’identifier les freins, les blocages ou les influences pouvant ralentir votre progression personnelle, sentimentale ou matérielle.',
+        'L’objectif est de vous apporter plus de clarté sur votre situation actuelle et de comprendre pourquoi certaines portes semblent fermées malgré votre volonté d’avancer.'
+      ],
+      suitedFor: [
+        'Blocages répétitifs',
+        'Malchance',
+        'Vie stagnante',
+        'Retards importants',
+        'Difficultés persistantes',
+        'Projets bloqués',
+        'Échecs à répétition',
+        'Ouverture des chemins'
+      ]
+    },
+    {
+      title: 'Protection Spirituelle',
+      icon: 'bx-show',
+      text: 'Ressentez-vous une lourdeur inhabituelle autour de vous ? Des tensions constantes, un mal-être persistant ou l’impression que certaines énergies négatives perturbent votre équilibre personnel et émotionnel ?',
+      details: [
+        'Certaines situations peuvent provoquer une sensation de fatigue émotionnelle, des conflits répétitifs, des perturbations relationnelles ou une impression d’instabilité difficile à expliquer.',
+        'Cette consultation permet d’évaluer les influences énergétiques pouvant affecter votre bien-être, votre environnement ou vos relations afin de mieux comprendre les déséquilibres présents dans votre vie actuelle.',
+        'Grâce à une analyse approfondie de votre situation, vous pourrez obtenir des réponses claires sur les tensions, les énergies négatives ou les influences extérieures pouvant perturber votre stabilité.'
+      ],
+      suitedFor: [
+        'Mauvaises énergies',
+        'Jalousie',
+        'Mauvais œil',
+        'Conflits répétitifs',
+        'Tensions persistantes',
+        'Fatigue émotionnelle',
+        'Protection spirituelle',
+        'Déséquilibre énergétique'
+      ]
+    },
+    {
+      title: 'Réussite & Évolution',
       icon: 'bx-briefcase-alt-2',
-      text: 'Prenez du recul sur vos choix, vos opportunités et les moments favorables pour agir.'
-    },
-    {
-      title: 'Tirage intuitif',
-      icon: 'bx-moon',
-      text: 'Une consultation fluide pour comprendre les énergies du moment et les prochaines étapes.'
+      text: 'Malgré vos efforts, avez-vous le sentiment que votre évolution reste bloquée ou que certaines opportunités vous échappent constamment ?',
+      details: [
+        'Cette consultation est destinée aux personnes souhaitant mieux comprendre les freins pouvant ralentir leur réussite personnelle, professionnelle ou matérielle.',
+        'Lorsque les projets stagnent, que les opportunités tardent à arriver ou qu’une impression de limitation persiste malgré votre motivation, il peut être nécessaire d’obtenir une vision plus claire des énergies entourant votre évolution.',
+        'Cette analyse vous permet de mieux comprendre votre situation actuelle, les obstacles présents sur votre chemin ainsi que les possibilités d’évolution pouvant s’ouvrir à vous dans les périodes à venir.'
+      ],
+      suitedFor: [
+        'Évolution personnelle',
+        'Réussite professionnelle',
+        'Opportunités bloquées',
+        'Stagnation de vie',
+        'Projets en difficulté',
+        'Manque d’évolution',
+        'Instabilité matérielle',
+        'Réussite & progression'
+      ]
     },
     {
       title: 'Relations & Famille',
@@ -135,6 +198,10 @@ const siteData = {
     {
       question: 'Puis-je réserver pour une urgence sentimentale ?',
       answer: 'Oui, le format court permet d’obtenir un éclairage rapide sur une situation précise.'
+    },
+    {
+      question: 'Sur quel réseau puis-je contacter Monelle ?',
+      answer: 'Vous pouvez écrire à Monelle sur WhatsApp, Instagram, Facebook, TikTok ou Snapchat selon le canal le plus simple pour vous.'
     }
   ],
   plans: [
@@ -264,10 +331,7 @@ exports.services = (req, res) => {
 };
 
 exports.consultations = (req, res) => {
-  renderPage(res, 'consultations', {
-    currentPath: '/consultations',
-    title: 'Réseaux'
-  });
+  res.redirect(301, '/contact');
 };
 
 exports.pricing = (req, res) => {
@@ -278,10 +342,7 @@ exports.pricing = (req, res) => {
 };
 
 exports.about = (req, res) => {
-  renderPage(res, 'about', {
-    currentPath: '/apropos',
-    title: 'Monelle'
-  });
+  res.redirect(301, '/blog');
 };
 
 exports.blog = (req, res) => {
