@@ -1097,6 +1097,10 @@ button {
   gap: 22px;
 }
 
+.blog-services-section {
+  padding-bottom: 34px;
+}
+
 .blog-category-card {
   padding: 28px;
   background: var(--surface);
@@ -1133,8 +1137,8 @@ button {
 .article-preview {
   position: relative;
   display: grid;
-  gap: 14px;
-  padding: 18px;
+  gap: 10px;
+  padding: 16px 18px;
   background: #fffdf8;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1189,6 +1193,10 @@ button {
 .article-consultation-cta .btn {
   justify-self: start;
   margin-top: 4px;
+}
+
+.category-consultation-cta {
+  margin-top: 18px;
 }
 
 .article-extra-links {

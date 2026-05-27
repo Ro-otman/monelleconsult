@@ -159,39 +159,6 @@
   </div>
 </section>
 
-<section class="section reveal">
-  <div class="section-heading">
-    <p class="eyebrow">Les domaines de Monelle</p>
-    <h2>Les sujets que Monelle éclaire avec attention.</h2>
-  </div>
-  <div class="card-grid">
-    <% services.forEach((service, index) => { %>
-      <article class="service-card refined">
-        <span class="card-icon"><i class="bx <%= service.icon %>" aria-hidden="true"></i></span>
-        <h3><%= service.title %></h3>
-        <p><%= service.text %></p>
-        <% if (service.details) { %>
-          <div class="service-details" id="service-details-<%= index %>" hidden>
-            <% service.details.forEach((detail) => { %>
-              <p><%= detail %></p>
-            <% }) %>
-            <strong>Consultation adaptée pour :</strong>
-            <ul>
-              <% service.suitedFor.forEach((item) => { %>
-                <li><%= item %></li>
-              <% }) %>
-            </ul>
-          </div>
-          <button class="read-more-toggle" type="button" data-read-more aria-expanded="false" aria-controls="service-details-<%= index %>">
-            Lire plus
-          </button>
-          <a class="btn primary service-cta" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> Commencer la consultation</a>
-        <% } %>
-      </article>
-    <% }) %>
-  </div>
-</section>
-
 <section class="section formats-section reveal">
   <div class="section-heading">
     <p class="eyebrow"><i class="bx bx-layer" aria-hidden="true"></i> Recevoir la guidance de Monelle</p>

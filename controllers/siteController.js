@@ -41,8 +41,8 @@ const siteData = {
   ],
   navItems: [
     { label: 'Accueil', href: '/' },
-    { label: 'Accompagnements', href: '/services' },
-    { label: 'Conseils de Monelle', href: '/blog' },
+    { label: 'Services', href: '/services' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' }
   ],
   services: [
@@ -326,7 +326,7 @@ exports.home = (req, res) => {
 exports.services = (req, res) => {
   renderPage(res, 'services', {
     currentPath: '/services',
-    title: 'Accompagnements de Monelle'
+    title: 'Services'
   });
 };
 
@@ -348,7 +348,7 @@ exports.about = (req, res) => {
 exports.blog = (req, res) => {
   renderPage(res, 'blog', {
     currentPath: '/blog',
-    title: 'Conseils de Monelle'
+    title: 'Blog'
   });
 };
 

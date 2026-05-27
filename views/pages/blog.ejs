@@ -1,5 +1,5 @@
 <section class="page-hero section compact blog-banner">
-  <p class="eyebrow">Conseils de Monelle</p>
+  <p class="eyebrow">Blog</p>
   <h1>Son approche et les sujets que Monelle aborde dans ses guidances.</h1>
   <p>Découvrez sa manière d'accompagner les situations sentimentales, les blocages, la protection spirituelle, l'évolution personnelle et les relations familiales.</p>
 </section>
@@ -45,12 +45,45 @@
 
 <section class="section about-guidance-band blog-guidance-band">
   <div>
-    <p class="eyebrow"><i class="bx bx-moon" aria-hidden="true"></i> Accompagnement</p>
+    <p class="eyebrow"><i class="bx bx-moon" aria-hidden="true"></i> Services</p>
     <h2>Une consultation pensée pour vous accompagner avec sérieux.</h2>
   </div>
   <div>
     <p>Chaque situation étant différente, les consultations sont réalisées avec attention afin d'apporter une analyse sincère, approfondie et adaptée à vos questionnements.</p>
     <p>L'objectif est de vous aider à mieux comprendre votre situation actuelle, les tensions qui vous entourent ainsi que les énergies pouvant influencer votre équilibre sentimental, émotionnel ou personnel.</p>
+  </div>
+</section>
+
+<section class="section blog-services-section">
+  <div class="section-heading">
+    <p class="eyebrow">Les domaines de Monelle</p>
+    <h2>Les sujets que Monelle éclaire avec attention.</h2>
+  </div>
+  <div class="card-grid">
+    <% services.forEach((service, index) => { %>
+      <article class="service-card refined">
+        <span class="card-icon"><i class="bx <%= service.icon %>" aria-hidden="true"></i></span>
+        <h3><%= service.title %></h3>
+        <p><%= service.text %></p>
+        <% if (service.details) { %>
+          <div class="service-details" id="blog-service-details-<%= index %>" hidden>
+            <% service.details.forEach((detail) => { %>
+              <p><%= detail %></p>
+            <% }) %>
+            <strong>Consultation adaptée pour :</strong>
+            <ul>
+              <% service.suitedFor.forEach((item) => { %>
+                <li><%= item %></li>
+              <% }) %>
+            </ul>
+          </div>
+          <button class="read-more-toggle" type="button" data-read-more aria-expanded="false" aria-controls="blog-service-details-<%= index %>">
+            Lire plus
+          </button>
+          <a class="btn primary service-cta" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> Commencer la consultation</a>
+        <% } %>
+      </article>
+    <% }) %>
   </div>
 </section>
 
@@ -69,24 +102,22 @@
         </div>
       </header>
       <ul class="article-title-list">
-        <% category.articles.forEach((article, articleIndex) => { %>
+        <% category.articles.forEach((article) => { %>
           <li class="article-preview">
             <h3><a href="/blog"><%= article %></a></h3>
-            <div class="article-consultation-cta">
-              <strong>Entrer en lien avec Monelle</strong>
-              <p>Envoyez votre demande à Monelle depuis WhatsApp ou l'un de ses réseaux officiels.</p>
-              <a class="btn primary" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> <span class="desktop-label">Contacter Monelle</span><span class="mobile-label">Contacter</span></a>
-            </div>
-            <% if (articleIndex === 0 || articleIndex === 3) { %>
-              <div class="article-extra-links" aria-label="Contenus complémentaires">
-                <a href="/blog">Articles similaires</a>
-                <a href="/#avis-clients">Avis clients</a>
-                <a href="/#questions-frequentes">Questions fréquentes</a>
-              </div>
-            <% } %>
           </li>
         <% }) %>
       </ul>
+      <div class="article-consultation-cta category-consultation-cta">
+        <strong>Entrer en lien avec Monelle</strong>
+        <p>Envoyez votre demande à Monelle depuis WhatsApp ou l'un de ses réseaux officiels.</p>
+        <a class="btn primary" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> Contacter Monelle</a>
+        <div class="article-extra-links" aria-label="Contenus complémentaires">
+          <a href="/blog">Articles similaires</a>
+          <a href="/#avis-clients">Avis clients</a>
+          <a href="/#questions-frequentes">Questions fréquentes</a>
+        </div>
+      </div>
     </article>
   <% }) %>
 </section>
