@@ -829,6 +829,10 @@ button {
   font-size: 1.25rem;
 }
 
+.mobile-label {
+  display: none;
+}
+
 .consultation-format-card .card-icon {
   margin-bottom: 6px;
 }
@@ -2084,9 +2088,31 @@ button {
     padding: 52px 0;
   }
 
+  body {
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  .hero-content h1,
+  .page-hero h1,
+  .section-heading h2,
+  .final-cta h2 {
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  .faq-question span,
+  .btn {
+    overflow-wrap: break-word;
+  }
+
   .hero-content h1 {
-    font-size: 2rem;
-    line-height: 1.08;
+    font-size: 1.9rem;
+    line-height: 1.12;
   }
 
   .page-hero h1,
@@ -2095,15 +2121,34 @@ button {
   .about-hero h1,
   .about-guidance-band h2,
   .about-reviews h2 {
-    font-size: 1.75rem;
-    line-height: 1.12;
+    font-size: 1.62rem;
+    line-height: 1.16;
   }
 
   .hero-text,
   .page-hero p,
   .split-section p,
   .quote-band p {
-    font-size: 1rem;
+    font-size: 0.98rem;
+    line-height: 1.62;
+  }
+
+  .page-hero.compact {
+    min-height: 240px;
+    padding: 30px 22px;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 0 16px;
+    gap: 6px;
+    font-size: 0.92rem;
+    line-height: 1.18;
   }
 
   .intro-band,
@@ -2187,6 +2232,47 @@ button {
     width: 100%;
   }
 
+  .article-consultation-cta .desktop-label {
+    display: none;
+  }
+
+  .article-consultation-cta .mobile-label {
+    display: inline;
+  }
+
+  .service-card h2,
+  .service-card h3,
+  .pricing-card h2,
+  .consultation-list h2,
+  .contact-card h2,
+  .article-preview h3,
+  .format-card h3 {
+    font-size: 1.12rem;
+    line-height: 1.22;
+    text-wrap: balance;
+  }
+
+  .service-card p,
+  .pricing-card span,
+  .consultation-list p,
+  .contact-card p,
+  .article-consultation-cta p,
+  .consultation-choice-grid p {
+    font-size: 0.95rem;
+    line-height: 1.58;
+  }
+
+  .faq-question {
+    align-items: flex-start;
+    padding: 18px;
+    line-height: 1.35;
+  }
+
+  .faq-item p {
+    padding: 0 18px 18px;
+    line-height: 1.6;
+  }
+
   .steps div {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -2262,6 +2348,21 @@ button {
     width: min(100% - 20px, 1120px);
   }
 
+  .page-hero h1,
+  .section-heading h2,
+  .final-cta h2,
+  .about-hero h1 {
+    font-size: 1.45rem;
+    line-height: 1.18;
+  }
+
+  .hero-text,
+  .page-hero p,
+  .split-section p,
+  .quote-band p {
+    font-size: 0.94rem;
+  }
+
   .site-header {
     padding-left: 12px;
     padding-right: 12px;
@@ -2278,6 +2379,11 @@ button {
 
   .hero-panel strong {
     font-size: 1.58rem;
+  }
+
+  .btn {
+    padding: 0 14px;
+    font-size: 0.88rem;
   }
 
   .monelle-identity-card {
