@@ -12,15 +12,15 @@
         <i class="bx bxs-badge-check" aria-hidden="true"></i>
       </span>
       <span>Voyante intuitive</span>
-      <a class="monelle-consult-link" href="/reservation">Consulter</a>
+      <a class="monelle-consult-link" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer">Contacter</a>
     </div>
   </div>
   <div class="hero-content">
     <p class="eyebrow"><i class="bx bx-moon" aria-hidden="true"></i> Monelle, voyante intuitive</p>
     <h1 class="hero-title">
-      <span>Entrez dans l'univers de</span>
-      <span>Monelle pour recevoir</span>
-      <span>une guidance</span>
+      <span>Entrez dans l'univers</span>
+      <span>de Monelle pour</span>
+      <span>recevoir une guidance</span>
       <span>claire.</span>
     </h1>
     <p class="hero-text hero-mobile-hidden">Monelle vous accompagne avec écoute, intuition et discrétion pour comprendre vos blocages, vos relations et les énergies qui influencent votre avenir.</p>
@@ -30,7 +30,7 @@
       <span><i class="bx bx-user-voice" aria-hidden="true"></i> Personnalisée</span>
     </div>
     <div class="hero-actions">
-      <a class="btn primary" href="/reservation"><i class="bx bx-sparkles" aria-hidden="true"></i> Commencer la consultation</a>
+      <a class="btn primary" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> Contacter Monelle</a>
       <a class="btn ghost light" href="/apropos"><i class="bx bx-compass" aria-hidden="true"></i> Découvrir son approche</a>
     </div>
     <aside class="hero-panel premium-card hero-video-panel hero-mobile-video-panel" aria-label="Résumé Monelle en vidéo">
@@ -176,7 +176,7 @@
                 <li><%= item %></li>
               <% }) %>
             </ul>
-            <a class="btn primary service-cta" href="/reservation"><i class="bx bx-right-arrow-alt" aria-hidden="true"></i> Commencer la consultation</a>
+            <a class="btn primary service-cta" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> Contacter Monelle</a>
           </div>
         <% } %>
       </article>
@@ -190,10 +190,10 @@
     <h2>Choisissez la manière la plus naturelle d'échanger avec elle.</h2>
   </div>
   <div class="format-grid">
-    <% consultationFormats.forEach((format) => { %>
+    <% socialLinks.slice(0, 3).forEach((format) => { %>
       <article class="format-card">
         <i class="bx <%= format.icon %>" aria-hidden="true"></i>
-        <h3><%= format.title %></h3>
+        <h3><%= format.label %></h3>
         <p><%= format.text %></p>
       </article>
     <% }) %>
@@ -228,13 +228,13 @@
 <section class="section split-section premium-process reveal">
   <div>
     <p class="eyebrow">Déroulement</p>
-    <h2>Un rendez-vous simple pour entrer en lien avec Monelle.</h2>
-    <p>Vous choisissez votre format, vous partagez votre question principale, puis Monelle vous accompagne avec une lecture adaptée à votre situation sentimentale, émotionnelle ou personnelle.</p>
+    <h2>Un lien simple depuis vos réseaux préférés.</h2>
+    <p>Vous choisissez la plateforme qui vous convient, vous envoyez votre question principale, puis Monelle vous répond avec discrétion et attention.</p>
   </div>
   <div class="steps">
-    <div><span>01</span><i class="bx bx-calendar-heart" aria-hidden="true"></i><p>Sélectionnez la durée et le canal qui vous convient pour consulter Monelle.</p></div>
-    <div><span>02</span><i class="bx bx-edit-alt" aria-hidden="true"></i><p>Expliquez votre situation afin de poser un cadre clair et confidentiel.</p></div>
-    <div><span>03</span><i class="bx bx-bulb" aria-hidden="true"></i><p>Recevez une analyse sérieuse avec des pistes concrètes pour avancer.</p></div>
+    <div><span>01</span><i class="bx bx-share-alt" aria-hidden="true"></i><p>Choisissez WhatsApp, Instagram, Facebook, TikTok ou Snapchat.</p></div>
+    <div><span>02</span><i class="bx bx-edit-alt" aria-hidden="true"></i><p>Envoyez votre demande avec les éléments importants de votre situation.</p></div>
+    <div><span>03</span><i class="bx bx-bulb" aria-hidden="true"></i><p>Recevez une réponse de Monelle sur le réseau choisi.</p></div>
   </div>
 </section>
 
@@ -261,5 +261,5 @@
     <p class="eyebrow">Prêt à commencer</p>
     <h2>Votre situation mérite le regard attentif et confidentiel de Monelle.</h2>
   </div>
-  <a class="btn primary" href="/reservation"><i class="bx bx-right-arrow-alt" aria-hidden="true"></i> Commencer la consultation</a>
+  <a class="btn primary" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> Contacter Monelle</a>
 </section>

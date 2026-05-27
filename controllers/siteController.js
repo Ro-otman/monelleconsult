@@ -2,10 +2,47 @@ const siteData = {
   brand: 'Monelle',
   phone: '+33 7 55 00 19 82',
   email: 'contact@monelle-voyance.com',
+  primarySocial: {
+    label: 'WhatsApp',
+    href: 'https://wa.me/33644675670',
+    icon: 'bxl-whatsapp'
+  },
+  socialLinks: [
+    {
+      label: 'Facebook',
+      href: 'https://www.facebook.com/share/1Csn9cgXJS/',
+      icon: 'bxl-facebook',
+      text: 'Suivez Monelle et envoyez votre demande depuis Facebook.'
+    },
+    {
+      label: 'Instagram',
+      href: 'https://www.instagram.com/monelleconsultation?igsh=NWFsMHc5dnY0M25x',
+      icon: 'bxl-instagram',
+      text: 'Découvrez son univers et contactez Monelle en message privé.'
+    },
+    {
+      label: 'TikTok',
+      href: 'https://www.tiktok.com/@monelleconsultation?_r=1&_t=ZG-96hxr217ZkP',
+      icon: 'bxl-tiktok',
+      text: 'Retrouvez ses contenus courts et entrez en lien avec elle.'
+    },
+    {
+      label: 'Snapchat',
+      href: 'https://www.snapchat.com/add/mo.voyance?share_id=xM9MtsRR7T8&locale=fr-FR',
+      icon: 'bxl-snapchat',
+      text: 'Ajoutez Monelle pour un contact simple et direct.'
+    },
+    {
+      label: 'WhatsApp',
+      href: 'https://wa.me/33644675670',
+      icon: 'bxl-whatsapp',
+      text: 'Le canal le plus direct pour envoyer votre question à Monelle.'
+    }
+  ],
   navItems: [
     { label: 'Accueil', href: '/' },
     { label: 'Accompagnements', href: '/services' },
-    { label: 'Consultations', href: '/consultations' },
+    { label: 'Réseaux', href: '/consultations' },
     { label: 'Monelle', href: '/apropos' },
     { label: 'Conseils de Monelle', href: '/blog' },
     { label: 'Contact', href: '/contact' }
@@ -49,19 +86,19 @@ const siteData = {
   ],
   consultationFormats: [
     {
-      icon: 'bx-phone-call',
-      title: 'Téléphone',
-      text: 'Un échange direct pour obtenir une réponse claire, sans attendre.'
+      icon: 'bxl-whatsapp',
+      title: 'WhatsApp',
+      text: 'Envoyez votre question directement à Monelle sur WhatsApp.'
     },
     {
-      icon: 'bx-video',
-      title: 'Visio privée',
-      text: 'Un rendez-vous plus posé pour les situations qui demandent de la nuance.'
+      icon: 'bxl-instagram',
+      title: 'Instagram',
+      text: 'Suivez son univers et contactez-la en message privé.'
     },
     {
-      icon: 'bx-message-square-detail',
-      title: 'Message détaillé',
-      text: 'Une synthèse écrite, pratique à relire après la consultation.'
+      icon: 'bxl-facebook',
+      title: 'Facebook',
+      text: 'Retrouvez Monelle et échangez avec elle depuis sa page.'
     }
   ],
   testimonials: [
@@ -208,7 +245,7 @@ function renderPage(res, page, meta = {}) {
     page,
     currentPath: meta.currentPath || '/',
     title: meta.title ? `${meta.title} | ${siteData.brand}` : `${siteData.brand} | Voyance moderne et bienveillante`,
-    description: meta.description || 'Monelle, voyante intuitive, propose des consultations privées, personnalisées et confidentielles.'
+    description: meta.description || 'Monelle, voyante intuitive, vous accueille sur ses réseaux officiels pour une guidance privée et confidentielle.'
   });
 }
 
@@ -229,7 +266,7 @@ exports.services = (req, res) => {
 exports.consultations = (req, res) => {
   renderPage(res, 'consultations', {
     currentPath: '/consultations',
-    title: 'Consultations'
+    title: 'Réseaux'
   });
 };
 
@@ -270,10 +307,7 @@ exports.contact = (req, res) => {
 };
 
 exports.booking = (req, res) => {
-  renderPage(res, 'booking', {
-    currentPath: '/reservation',
-    title: 'Réservation'
-  });
+  res.redirect(siteData.primarySocial.href);
 };
 
 exports.sendContact = (req, res) => {

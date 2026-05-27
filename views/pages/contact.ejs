@@ -1,49 +1,30 @@
 <section class="page-hero section compact contact-banner">
   <p class="eyebrow">Contacter Monelle</p>
   <h1>Une question avant de consulter Monelle ?</h1>
-  <p>Envoyez un message, Monelle vous répondra avec les informations utiles pour choisir le bon format.</p>
+  <p>Choisissez l'un de ses réseaux officiels et envoyez directement votre demande à Monelle.</p>
 </section>
 
 <section class="section contact-layout">
-  <form class="contact-form" action="/contact" method="post">
-    <label>Nom complet
-      <input type="text" name="name" placeholder="Votre nom" required>
-    </label>
-    <label>Email
-      <input type="email" name="email" placeholder="vous@email.com" required>
-    </label>
-    <label>Votre demande
-      <textarea name="message" rows="6" placeholder="Décrivez votre question principale" required></textarea>
-    </label>
-    <button class="btn primary" type="submit">Envoyer</button>
-  </form>
+  <div class="contact-form">
+    <h2>Écrire à Monelle</h2>
+    <p>Le contact se fait maintenant depuis les réseaux officiels afin de garder un échange simple, direct et facile à suivre.</p>
+    <a class="btn primary" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer">
+      <i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i>
+      Contacter sur WhatsApp
+    </a>
+  </div>
   <aside class="contact-card">
-    <h2>Coordonnées</h2>
-    <a href="tel:<%= phone.replaceAll(' ', '') %>"><%= phone %></a>
+    <h2>Réseaux officiels</h2>
     <a href="mailto:<%= email %>"><%= email %></a>
     <div class="contact-social-links" aria-label="Réseaux sociaux de Monelle">
-      <a href="https://www.facebook.com/share/1Csn9cgXJS/" target="_blank" rel="noopener noreferrer">
-        <i class="bx bxl-facebook" aria-hidden="true"></i>
-        <span>Facebook</span>
-      </a>
-      <a href="https://www.instagram.com/monelleconsultation?igsh=NWFsMHc5dnY0M25x" target="_blank" rel="noopener noreferrer">
-        <i class="bx bxl-instagram" aria-hidden="true"></i>
-        <span>Instagram</span>
-      </a>
-      <a href="https://www.tiktok.com/@monelleconsultation?_r=1&_t=ZG-96hxr217ZkP" target="_blank" rel="noopener noreferrer">
-        <i class="bx bxl-tiktok" aria-hidden="true"></i>
-        <span>Tiktok</span>
-      </a>
-      <a href="https://www.snapchat.com/add/mo.voyance?share_id=xM9MtsRR7T8&locale=fr-FR" target="_blank" rel="noopener noreferrer">
-        <i class="bx bxl-snapchat" aria-hidden="true"></i>
-        <span>Snapchat</span>
-      </a>
-      <a href="https://wa.me/33644675670" target="_blank" rel="noopener noreferrer">
-        <i class="bx bxl-whatsapp" aria-hidden="true"></i>
-        <span>WhatsApp</span>
-      </a>
+      <% socialLinks.forEach((social) => { %>
+        <a href="<%= social.href %>" target="_blank" rel="noopener noreferrer">
+          <i class="bx <%= social.icon %>" aria-hidden="true"></i>
+          <span><%= social.label %></span>
+        </a>
+      <% }) %>
     </div>
-    <p>Réponse habituelle sous 24 heures ouvrables.</p>
+    <p>Réponse habituelle sur les réseaux officiels de Monelle.</p>
   </aside>
 </section>
 
@@ -55,10 +36,10 @@
   <div class="faq-list">
     <article class="faq-item open">
       <button type="button" class="faq-question">
-        <span>Comment se déroule une consultation ?</span>
+        <span>Comment contacter Monelle ?</span>
         <i class="bx bx-chevron-down" aria-hidden="true"></i>
       </button>
-      <p>Une fois votre paiement validé, votre demande est prise en charge. Vous pourrez ensuite choisir le mode de consultation (site ou messagerie) afin de recevoir une analyse personnalisée de votre situation.</p>
+      <p>Choisissez WhatsApp, Instagram, Facebook, TikTok ou Snapchat, puis envoyez votre demande directement à Monelle.</p>
     </article>
 
     <article class="faq-item">
@@ -71,18 +52,18 @@
 
     <article class="faq-item">
       <button type="button" class="faq-question">
-        <span>Quels moyens de paiement acceptez-vous ?</span>
+        <span>Où trouver les liens officiels ?</span>
         <i class="bx bx-chevron-down" aria-hidden="true"></i>
       </button>
-      <p>Les paiements sont acceptés via PayPal ou par virement bancaire sécurisé. Les informations nécessaires vous sont communiquées au moment de la réservation.</p>
+      <p>Tous les liens officiels sont regroupés sur cette page et dans la page Réseaux du site.</p>
     </article>
 
     <article class="faq-item">
       <button type="button" class="faq-question">
-        <span>Dois-je envoyer une preuve de paiement ?</span>
+        <span>Quel réseau choisir ?</span>
         <i class="bx bx-chevron-down" aria-hidden="true"></i>
       </button>
-      <p>Oui, une capture de votre paiement est demandée afin de confirmer et activer votre consultation.</p>
+      <p>WhatsApp est le plus direct. Instagram, TikTok, Snapchat et Facebook permettent aussi de suivre l'univers de Monelle.</p>
     </article>
 
     <article class="faq-item">
@@ -95,10 +76,10 @@
 
     <article class="faq-item">
       <button type="button" class="faq-question">
-        <span>Où se déroule la consultation ?</span>
+        <span>Où se fait l'échange ?</span>
         <i class="bx bx-chevron-down" aria-hidden="true"></i>
       </button>
-      <p>Vous pouvez choisir le canal qui vous convient le mieux : consultation sur le site ou via une messagerie comme WhatsApp ou autre plateforme disponible.</p>
+      <p>L'échange se fait directement sur le réseau que vous choisissez parmi les plateformes officielles de Monelle.</p>
     </article>
 
     <article class="faq-item">
@@ -106,7 +87,7 @@
         <span>Sous combien de temps vais-je recevoir une réponse ?</span>
         <i class="bx bx-chevron-down" aria-hidden="true"></i>
       </button>
-      <p>Les consultations sont généralement prises en charge rapidement après validation du paiement.</p>
+      <p>Les demandes sont généralement prises en charge rapidement depuis les réseaux officiels.</p>
     </article>
 
     <article class="faq-item">
@@ -127,10 +108,10 @@
 
     <article class="faq-item">
       <button type="button" class="faq-question">
-        <span>Puis-je choisir la plateforme de consultation ?</span>
+        <span>Puis-je choisir la plateforme de contact ?</span>
         <i class="bx bx-chevron-down" aria-hidden="true"></i>
       </button>
-      <p>Oui, vous pourrez choisir entre plusieurs options disponibles après votre paiement (site, WhatsApp ou autres réseaux proposés).</p>
+      <p>Oui, vous pouvez choisir WhatsApp, Instagram, Facebook, TikTok ou Snapchat selon votre préférence.</p>
     </article>
   </div>
 </section>

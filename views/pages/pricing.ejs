@@ -12,7 +12,7 @@
       <p><%= plan.duration %></p>
       <strong><%= plan.price %></strong>
       <span><%= plan.details %></span>
-      <a class="btn <%= index === 1 ? 'primary' : 'ghost' %>" href="/reservation">Choisir</a>
+      <a class="btn <%= index === 1 ? 'primary' : 'ghost' %>" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer">Contacter</a>
     </article>
   <% }) %>
 </section>

@@ -19,9 +19,9 @@
           <li class="article-preview">
             <h3><a href="/blog"><%= article %></a></h3>
             <div class="article-consultation-cta">
-              <strong>Guidance privée avec Monelle</strong>
-              <p>Obtenez des réponses claires sur votre situation grâce à une consultation confidentielle et approfondie avec Monelle.</p>
-              <a class="btn primary" href="/reservation"><i class="bx bx-right-arrow-alt" aria-hidden="true"></i> <span class="desktop-label">Commencer la consultation</span><span class="mobile-label">Commencer</span></a>
+              <strong>Entrer en lien avec Monelle</strong>
+              <p>Envoyez votre demande à Monelle depuis WhatsApp ou l'un de ses réseaux officiels.</p>
+              <a class="btn primary" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer"><i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i> <span class="desktop-label">Contacter Monelle</span><span class="mobile-label">Contacter</span></a>
             </div>
             <% if (articleIndex === 0 || articleIndex === 3) { %>
               <div class="article-extra-links" aria-label="Contenus complémentaires">

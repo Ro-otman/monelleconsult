@@ -3,7 +3,7 @@
     const navIcons = {
       '/': 'bx-home-alt',
       '/services': 'bx-moon',
-      '/consultations': 'bx-phone-call',
+      '/consultations': 'bx-share-alt',
       '/apropos': 'bx-user',
       '/blog': 'bx-book-open',
       '/contact': 'bx-envelope'
@@ -26,14 +26,14 @@
         <span><%= item.label %></span>
       </a>
     <% }) %>
-    <a class="mobile-nav-cta" href="/reservation">
-      <i class="bx bx-calendar-star" aria-hidden="true"></i>
-      <span>Réserver une guidance</span>
+    <a class="mobile-nav-cta" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer">
+      <i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i>
+      <span>Contacter Monelle</span>
     </a>
   </nav>
 
-  <a class="header-cta" href="/reservation">
-    <i class="bx bx-calendar-star" aria-hidden="true"></i>
-    <span>Réserver</span>
+  <a class="header-cta" href="<%= primarySocial.href %>" target="_blank" rel="noopener noreferrer">
+    <i class="bx <%= primarySocial.icon %>" aria-hidden="true"></i>
+    <span>Contacter</span>
   </a>
 </header>
