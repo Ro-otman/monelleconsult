@@ -2008,6 +2008,7 @@ button {
 
   .hero,
   .intro-band,
+  .quote-band,
   .split-section,
   .contact-layout,
   .footer-grid,
@@ -2017,6 +2018,12 @@ button {
   .about-guidance-band,
   .about-reviews {
     grid-template-columns: 1fr;
+  }
+
+  .services-quote-band {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .about-guidance-band {
@@ -2200,6 +2207,21 @@ button {
   .page-hero.compact {
     min-height: 240px;
     padding: 30px 22px;
+    align-content: end;
+    text-align: center;
+  }
+
+  .page-hero.compact h1,
+  .page-hero.compact p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-hero.compact .eyebrow,
+  .page-hero.compact .hero-actions {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .eyebrow {
@@ -2288,6 +2310,52 @@ button {
     width: 100%;
   }
 
+  .service-card,
+  .consultation-format-card {
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
+  }
+
+  .service-card .card-icon,
+  .consultation-format-card .card-icon {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    width: 46px;
+    height: 46px;
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  .service-card h2,
+  .service-card h3,
+  .service-card > p,
+  .service-card > a,
+  .service-card > button,
+  .consultation-format-card h2,
+  .consultation-format-card > p,
+  .consultation-format-card > a {
+    grid-column: 2;
+  }
+
+  .service-card h2,
+  .service-card h3,
+  .consultation-format-card h2 {
+    margin-top: 0;
+  }
+
+  .service-inline-video,
+  .service-details {
+    grid-column: 1 / -1;
+  }
+
+  .read-more-toggle,
+  .consultation-format-card a,
+  .service-card .service-link {
+    justify-self: start;
+  }
+
   .hero-note {
     border-radius: 8px;
   }
@@ -2324,6 +2392,42 @@ button {
   .consultation-choice-grid p {
     font-size: 0.95rem;
     line-height: 1.58;
+  }
+
+  .pricing-card {
+    gap: 12px;
+  }
+
+  .pricing-card .btn {
+    margin-top: 4px;
+  }
+
+  .contact-layout {
+    gap: 16px;
+  }
+
+  .contact-card {
+    display: grid;
+    gap: 12px;
+  }
+
+  .contact-card > a {
+    margin-top: 0;
+  }
+
+  .contact-social-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .contact-card .contact-social-links a {
+    justify-content: center;
+    padding: 11px 8px;
+    font-size: 0.9rem;
+  }
+
+  .faq-list {
+    gap: 10px;
   }
 
   .faq-question {
