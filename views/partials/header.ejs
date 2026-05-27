@@ -1,4 +1,14 @@
 <header class="site-header">
+  <%
+    const navIcons = {
+      '/': 'bx-home-alt',
+      '/services': 'bx-moon',
+      '/consultations': 'bx-phone-call',
+      '/apropos': 'bx-user',
+      '/blog': 'bx-book-open',
+      '/contact': 'bx-envelope'
+    };
+  %>
   <a class="brand" href="/" aria-label="Accueil Monelle">
     <span class="brand-mark">M</span>
     <span><%= brand %></span>
@@ -11,8 +21,15 @@
 
   <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
     <% navItems.forEach((item) => { %>
-      <a class="<%= currentPath === item.href ? 'active' : '' %>" href="<%= item.href %>"><%= item.label %></a>
+      <a class="<%= currentPath === item.href ? 'active' : '' %>" href="<%= item.href %>">
+        <i class="bx <%= navIcons[item.href] || 'bx-chevron-right' %>" aria-hidden="true"></i>
+        <span><%= item.label %></span>
+      </a>
     <% }) %>
+    <a class="mobile-nav-cta" href="/reservation">
+      <i class="bx bx-calendar-star" aria-hidden="true"></i>
+      <span>Réserver une guidance</span>
+    </a>
   </nav>
 
   <a class="header-cta" href="/reservation">

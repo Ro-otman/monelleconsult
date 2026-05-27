@@ -12,7 +12,14 @@
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
+    <div class="site-loader" data-site-loader aria-hidden="true">
+      <div class="loader-orb">
+        <span>M</span>
+      </div>
+      <p>Monelle</p>
+    </div>
     <%- include('../partials/header') %>
+    <button class="mobile-nav-backdrop" type="button" data-nav-backdrop aria-label="Fermer le menu"></button>
     <main>
       <%- include(`../pages/${page}`) %>
     </main>

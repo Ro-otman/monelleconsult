@@ -1,10 +1,44 @@
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
+const navBackdrop = document.querySelector('[data-nav-backdrop]');
+
+function closeMobileNav() {
+  if (!navToggle || !mainNav) return;
+
+  mainNav.classList.remove('open');
+  navToggle.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navBackdrop?.classList.remove('open');
+  document.body.classList.remove('nav-open');
+}
 
 if (navToggle && mainNav) {
   navToggle.addEventListener('click', () => {
     const isOpen = mainNav.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
+    navBackdrop?.classList.toggle('open', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
+  });
+
+  navBackdrop?.addEventListener('click', closeMobileNav);
+
+  mainNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMobileNav);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1080) closeMobileNav();
+  });
+}
+
+const siteLoader = document.querySelector('[data-site-loader]');
+
+if (siteLoader) {
+  window.addEventListener('load', () => {
+    window.setTimeout(() => {
+      siteLoader.classList.add('hidden');
+    }, 280);
   });
 }
 
